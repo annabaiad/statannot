@@ -26,6 +26,10 @@ def stat_test(box_data1, box_data2, test):
         stat, pval = stats.ttest_rel(a=box_data1, b=box_data2)
         testShortName = 't-test_rel'
         formattedOutput = "t-test paired samples, P_val={:.3e} stat={:.3e}".format(pval, stat)
+    elif test == 'Kruskal':
+        stat, pval = stats.frusfal(a=box_data1, b=box_data2)
+        testShortName = 'kruskal'
+        formattedOutput = "kruskal paired samples, P_val={:.3e} stat={:.3e}".format(pval, stat)
 
     return pval, formattedOutput, testShortName
 
