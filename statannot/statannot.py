@@ -122,7 +122,7 @@ def add_stat_annotation(ax,
     validList = ['inside', 'outside']
     if loc not in validList:
         raise ValueError("loc value should be one of the following: {}.".format(', '.join(validList)))
-    validList = ['t-test_ind', 't-test_paired', 'Mann-Whitney']
+    validList = ['t-test_ind', 't-test_paired', 'Mann-Whitney', 'kruskal']
     if test not in validList:
         raise ValueError("test value should be one of the following: {}.".format(', '.join(validList)))
 
